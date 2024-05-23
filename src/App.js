@@ -12,27 +12,48 @@ import {useState} from "react";
 
 function App() {
   const [newClicked, setNewClicked] = useState(false);
-  const data = [];
+  const [inputValue, setInputValue] = useState("");
+  const[data, setData] = useState([]);
+
+  const addData = () => {
+    setData([...data, {text: inputValue, clicked: false}]);
+    setNewClicked(false);
+    setInputValue("");
+  }
+
+  const clearData = () => {
+    setData([]);
+  }
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  }
+
   return (
     <div className="App">
       <header>
         <Title />
         <div className="buttongroup">
-          <NewButton />
-          <ClearButton />
+          {!newClicked && 
+            <NewButton clicked={()=>{setNewClicked(true)}}/>}
+          <ClearButton clicked={()=>{clearData()}}/>
         </div>
       </header>
       <div className="body">
       
-      <div className="inputsection">
-      <InputForm></InputForm>
-      <CancelButton></CancelButton>
-      <CreateButton></CreateButton>
-          
-      
-      </div>
-        <EmptyCard></EmptyCard>
-        <Card></Card>
+      {newClicked && (
+          <div className="inputsection">
+            <InputForm handleChange={handleInputChange} value={inputValue}/>
+            <CancelButton clicked={() => {setNewClicked(false); setInputValue("")}}/>
+            <CreateButton clicked={() => {addData()}}/>
+          </div>
+        )}
+
+        {data.length == 0 ? 
+        <EmptyCard></EmptyCard> : 
+        data.map((item, key) => (<Card text={item.text} clicked={item.clicked} key={key}></Card>))
+        }
+        
       </div>
     </div>
   );

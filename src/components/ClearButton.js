@@ -1,6 +1,6 @@
-export default function ClearButton() {
+export default function ClearButton({clicked}) {
   return (
-    <div className="clearbutton">
+    <div onClick={clicked} className="clearbutton">
       <p>Clear</p>
     </div>
   );

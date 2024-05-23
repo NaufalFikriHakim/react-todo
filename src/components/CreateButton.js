@@ -1,6 +1,7 @@
-export default function CreateButton(){
+export default function CreateButton({clicked}){
+    
     return(
-        <div className="create">
+        <div onClick={clicked} className="create">
             <p>Create</p>
         </div>
     )

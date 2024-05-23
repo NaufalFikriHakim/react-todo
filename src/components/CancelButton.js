@@ -1,7 +1,10 @@
-export default function CancelButton(){
+export default function CancelButton({clicked}){
+    const handleClick = () => {
+        clicked()
+    }
     return(
-        <div className="cancel">
-        <p>Cancel</p>
+        <div onClick={handleClick} className="cancel">
+            <p>Cancel</p>
 
         </div>
     )
