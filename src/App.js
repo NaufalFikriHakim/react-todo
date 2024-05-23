@@ -14,11 +14,16 @@ function App() {
   const [newClicked, setNewClicked] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const[data, setData] = useState([]);
+  const[valid, setValid] = useState(true);
 
   const addData = () => {
-    setData([...data, {text: inputValue, clicked: false}]);
-    setNewClicked(false);
-    setInputValue("");
+    if (inputValue.length <= 100) {
+      setData([...data, {text: inputValue, clicked: false}]);
+      setNewClicked(false);
+      setInputValue("");
+    } else {
+      setValid(false)
+    }
   }
 
   const clearData = () => {
@@ -27,6 +32,12 @@ function App() {
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
+  }
+
+  const cancelInput = () => {
+    setNewClicked(false); 
+    setInputValue("");
+    setValid(true);
   }
 
   return (
@@ -43,8 +54,13 @@ function App() {
       
       {newClicked && (
           <div className="inputsection">
+          <div className="inputvalidation">
             <InputForm handleChange={handleInputChange} value={inputValue}/>
-            <CancelButton clicked={() => {setNewClicked(false); setInputValue("")}}/>
+            {!valid && <p>Title mush be shorter than or equal to 100 characters.</p>}
+            
+          </div>
+            
+            <CancelButton clicked={() => {cancelInput()}}/>
             <CreateButton clicked={() => {addData()}}/>
           </div>
         )}

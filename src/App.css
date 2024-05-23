@@ -144,7 +144,7 @@ textarea{
   font-weight: 400;
   resize: none;
   overflow: hidden;
-  padding: 12px 10px;
+  
 }
 
 textarea::placeholder{
@@ -163,6 +163,18 @@ textarea:focus{
   justify-content: space-between;
 }
 
+.inputvalidation{
+  display: flex;
+  flex-direction: column;
+  padding: 12px 10px;
+}
+
+.inputvalidation{
+  color: #E11D48;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-size: 12px;
+  font-weight: 500;
+}
 
 
 @font-face {
