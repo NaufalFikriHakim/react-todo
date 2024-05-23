@@ -1,7 +1,10 @@
 .App {
-  background-color: #FAFAF9;
   width: 800px;
   margin: auto;
+}
+
+html{
+  background-color: #FAFAF9;
 }
 
 header {
@@ -33,7 +36,7 @@ header {
   font-size: 14px;
   font-weight: 600;
   color: #BE123C;
-  background-color: #F0F9FF;
+  background-color: #FAFAF9;
   width: 68px;
   height: 36px;
   text-align: center;
@@ -52,6 +55,28 @@ h1{
   font-family: 'inter', 'Times New Roman', Times, serif;
   font-size: 24px;
   font-weight: 700;
+}
+
+.card{
+  width: 800px;
+  height: 52px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 
+    0px 1px 2px rgba(0, 0, 0, 0.1),
+    0px 1px 3px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card img{
+  width: 24px;
+  height: 24px;
+}
+
+.card p {
+  width: 688px;
 }
 
 
