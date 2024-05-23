@@ -52,13 +52,17 @@ function App() {
     setData(data.filter((value, i) => {return i !== index}))
   }
 
+  const handleAddNew = () => {
+    setTimeout(setNewClicked(true), 300)
+  }
+
   return (
     <div className="App">
       <header>
         <Title />
         <div className="buttongroup">
           {!newClicked && 
-            <NewButton clicked={()=>{setNewClicked(true)}}/>}
+            <NewButton clicked={()=>{handleAddNew()}}/>}
           <ClearButton clicked={()=>{clearData()}}/>
         </div>
       </header>
@@ -81,9 +85,6 @@ function App() {
         <EmptyCard></EmptyCard> : 
         data.map((item, key) => (<Card text={item.text} clicked={item.clicked} key={key} onPressDone={() => {handleDone(key, item.text)}} onPressDelete={() => {handleDelete(key)}}></Card>))
         }
-
-        <button>test</button>
-        
       </div>
     </div>
   );

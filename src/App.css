@@ -24,7 +24,11 @@ header {
   border-radius: 8px;
   width: 94px;
   height: 36px;
-  
+  transition: all 0.3s;
+}
+
+.newbutton:active {
+  opacity: 0;
 }
 
 .clearbutton p{
