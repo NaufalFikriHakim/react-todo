@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
 import NewButton from "./components/NewButton";
@@ -49,6 +48,10 @@ function App() {
     console.log(data);
   }
 
+  const handleDelete = (index) => {
+    setData(data.filter((value, i) => {return i !== index}))
+  }
+
   return (
     <div className="App">
       <header>
@@ -76,8 +79,10 @@ function App() {
 
         {data.length == 0 ? 
         <EmptyCard></EmptyCard> : 
-        data.map((item, key) => (<Card text={item.text} clicked={item.clicked} key={key} onPress={() => {handleDone(key, item.text)}}></Card>))
+        data.map((item, key) => (<Card text={item.text} clicked={item.clicked} key={key} onPressDone={() => {handleDone(key, item.text)}} onPressDelete={() => {handleDelete(key)}}></Card>))
         }
+
+        <button>test</button>
         
       </div>
     </div>

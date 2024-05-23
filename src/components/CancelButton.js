@@ -3,7 +3,7 @@ export default function CancelButton({clicked}){
         clicked()
     }
     return(
-        <div onClick={handleClick} className="cancel">
+        <div onClick={handleClick} className="cancel hoverable">
             <p>Cancel</p>
 
         </div>

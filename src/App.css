@@ -167,9 +167,6 @@ textarea:focus{
   display: flex;
   flex-direction: column;
   padding: 12px 10px;
-}
-
-.inputvalidation{
   color: #E11D48;
   font-family: 'inter', 'Times New Roman', Times, serif;
   font-size: 12px;
@@ -178,6 +175,10 @@ textarea:focus{
 
 .finished{
   opacity: 0.5;
+}
+
+.hoverable:hover{
+  cursor: pointer;
 }
 
 @font-face {
