@@ -5,8 +5,14 @@ import NewButton from "./components/NewButton";
 import ClearButton from "./components/ClearButton";
 import Card from "./components/Card";
 import EmptyCard from "./components/EmptyCard";
+import CancelButton from "./components/CancelButton";
+import InputForm from "./components/InputForm";
+import CreateButton from "./components/CreateButton";
+import {useState} from "react";
 
 function App() {
+  const [newClicked, setNewClicked] = useState(false);
+  const data = [];
   return (
     <div className="App">
       <header>
@@ -17,13 +23,17 @@ function App() {
         </div>
       </header>
       <div className="body">
+      
+      <div className="inputsection">
+      <InputForm></InputForm>
+      <CancelButton></CancelButton>
+      <CreateButton></CreateButton>
+          
+      
+      </div>
         <EmptyCard></EmptyCard>
         <Card></Card>
       </div>
-
-        
-
-
     </div>
   );
 }

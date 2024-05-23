@@ -10,6 +10,7 @@ html{
 header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .buttongroup{
@@ -59,14 +60,12 @@ h1{
 
 .card{
   width: 800px;
-  
   background-color: #FFFFFF;
   border-radius: 8px;
   box-shadow: 
     0px 1px 2px rgba(0, 0, 0, 0.1),
     0px 1px 3px rgba(0, 0, 0, 0.06);
   display: flex;
-  
   align-items: center;
 }
 
@@ -97,7 +96,71 @@ h1{
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
 
+.cancel{
+  width: 80px;
+  height: 36px;
+  color: #075985;
+  background-color: #FAFAF9;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cancel p {
+  padding: 8px 16px;
+  margin: auto;
+}
+
+
+.create{
+  width: 76px;
+  height: 36px;
+  background-color: #075985;
+  color: #F0F9FF;
+  border-radius: 8px;
+}
+
+.create p {
+  margin: auto;
+  padding: 8px 16px;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+textarea{
+  width: 600px;
+  height: 36px;
+  background-color: #FAFAF9;
+  border: none;
+  color: #1C1917;
+  font-size: 16px;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-weight: 400;
+  resize: none;
+  overflow: hidden;
+  padding: 12px 10px;
+}
+
+textarea::placeholder{
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #D6D3D1;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.inputsection{
+  display: flex;
+  justify-content: space-between;
 }
 
 
