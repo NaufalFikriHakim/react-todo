@@ -40,6 +40,15 @@ function App() {
     setValid(true);
   }
 
+  const handleDone = (index, newText) => {
+    const newData = {text: newText, clicked: true};
+    setData(prevData => {
+      const filteredData = prevData.filter((value, i) => i !== index);
+      return [...filteredData, newData];
+    })
+    console.log(data);
+  }
+
   return (
     <div className="App">
       <header>
@@ -67,7 +76,7 @@ function App() {
 
         {data.length == 0 ? 
         <EmptyCard></EmptyCard> : 
-        data.map((item, key) => (<Card text={item.text} clicked={item.clicked} key={key}></Card>))
+        data.map((item, key) => (<Card text={item.text} clicked={item.clicked} key={key} onPress={() => {handleDone(key, item.text)}}></Card>))
         }
         
       </div>

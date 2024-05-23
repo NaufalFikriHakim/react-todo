@@ -176,6 +176,9 @@ textarea:focus{
   font-weight: 500;
 }
 
+.finished{
+  opacity: 0.5;
+}
 
 @font-face {
   font-family: 'inter';
