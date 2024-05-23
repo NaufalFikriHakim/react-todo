@@ -59,15 +59,29 @@ h1{
 
 .card{
   width: 800px;
-  height: 52px;
+  
   background-color: #FFFFFF;
   border-radius: 8px;
   box-shadow: 
     0px 1px 2px rgba(0, 0, 0, 0.1),
     0px 1px 3px rgba(0, 0, 0, 0.06);
   display: flex;
-  justify-content: space-around;
+  
   align-items: center;
+}
+
+.todo{
+  height: 52px;
+  justify-content: space-around;
+}
+
+.empty {
+  height: 112px;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-weight: 500;
 }
 
 .card img{
@@ -77,6 +91,13 @@ h1{
 
 .card p {
   width: 688px;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
 }
 
 

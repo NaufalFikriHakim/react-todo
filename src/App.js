@@ -4,6 +4,7 @@ import Title from "./components/Title";
 import NewButton from "./components/NewButton";
 import ClearButton from "./components/ClearButton";
 import Card from "./components/Card";
+import EmptyCard from "./components/EmptyCard";
 
 function App() {
   return (
@@ -15,9 +16,14 @@ function App() {
           <ClearButton />
         </div>
       </header>
-      <body>
+      <div className="body">
+        <EmptyCard></EmptyCard>
         <Card></Card>
-      </body>
+      </div>
+
+        
+
+
     </div>
   );
 }
