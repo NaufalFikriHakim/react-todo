@@ -14,6 +14,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState([]);
   const [valid, setValid] = useState(true);
+  const [modal, setModal] = useState(false);
 
   const addData = () => {
     if (inputValue.length <= 100) {
@@ -25,9 +26,9 @@ function App() {
     }
   };
 
-  const clearData = () => {
-    setData([]);
-  };
+  const handleClearData = () => {
+    setModal(true);
+  }
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -60,6 +61,15 @@ function App() {
     setNewClicked(true);
   };
 
+  const handleModalCancel = () => {
+    setModal(false);
+  }
+
+  const handleModalConfirm = () => {
+    setModal(false);
+    setData([]);
+  }
+
   return (
     <div className="App">
       <header>
@@ -74,7 +84,7 @@ function App() {
           )}
           <ClearButton
             clicked={() => {
-              clearData();
+              handleClearData();
             }}
           />
         </div>
@@ -120,24 +130,26 @@ function App() {
           ))
         )}
       </div>
-      <div className="modal">
+      {modal && (<div className="modal">
         <div className="modalcontent">
         <div className="modalbody">
           <p>Confirm to clear all todos?</p>
         </div>
         
         <div className="modalbuttongroup">
-        <div className="modalcancel hoverable">
+        <div className="modalcancel hoverable" onClick={handleModalCancel}>
           <p>Cancel</p>
         </div>
-        <div className="modalconfirm hoverable">
+        <div className="modalconfirm hoverable" onClick={handleModalConfirm}>
           <p>Confirm</p>
         </div>
 
         </div>
         </div>
-      </div>
+      </div>)}
     </div>
+
+    
   );
 }
 
