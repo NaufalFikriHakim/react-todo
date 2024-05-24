@@ -1,6 +1,6 @@
-export default function EmptyCard(){
+export default function EmptyCard({shifted}){
     return(
-        <div className="empty card">
+        <div className={`empty card ${shifted? 'shifted' : ''}`}>
             <p>Nothing to-do yet.</p>
         </div>
     )

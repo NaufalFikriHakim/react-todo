@@ -85,6 +85,11 @@ h1{
   font-size: 14px;
   font-family: 'inter', 'Times New Roman', Times, serif;
   font-weight: 500;
+  transition: transform 0.3s;
+}
+
+.shifted {
+  transform: translateY(25px);
 }
 
 .card img{
@@ -184,6 +189,62 @@ textarea:focus{
 .hoverable:hover{
   cursor: pointer;
 }
+
+.modal{
+  width: 300px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 
+    0px 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.modalbuttongroup{
+  background-color: #FAFAF9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+.modalcancel{
+  width: 128px;
+  height: 36px;
+  text-align: center;
+}
+
+.modalcancel p{
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: 'inter', 'Times New Roman', Times, serif;
+  font-weight: 600;
+  margin: auto;
+}
+
+.modalconfirm{
+  background-color: #9F1239;
+  color: #FFF1F2;
+  width: 128px;
+  height: 36px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.modalconfirm p{
+  padding: 8px 16px;
+  margin: auto;
+}
+
+.modalbody{
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.modalbody p{
+  margin: 0;
+}
+
+
 
 @font-face {
   font-family: 'inter';
