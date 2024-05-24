@@ -107,21 +107,7 @@ h1{
   gap: 15px;
 }
 
-.cancel{
-  width: 80px;
-  height: 36px;
-  color: #075985;
-  background-color: #FAFAF9;
-  font-family: 'inter', 'Times New Roman', Times, serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-}
 
-.cancel p {
-  padding: 8px 16px;
-  margin: auto;
-}
 
 
 .create{
