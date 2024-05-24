@@ -3,7 +3,6 @@ const divStyle = {
   height: "36px",
   color: "#075985",
   backgroundColor: "#FAFAF9",
-  fontFamily: "'inter', 'Times New Roman', Times, serif",
   fontSize: "14px",
   fontWeight: "600",
   textAlign: "center",
